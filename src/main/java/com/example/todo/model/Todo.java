@@ -4,12 +4,10 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 
-@Entity // Ensures it is a database entity
+@Entity
 @Table(name = "todos")
-public class Todo {
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class Todo extends BaseEntity{
+ 
   private Long id;
 
   @Column(nullable = false)

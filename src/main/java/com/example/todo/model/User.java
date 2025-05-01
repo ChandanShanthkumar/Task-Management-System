@@ -3,13 +3,10 @@ package com.example.todo.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "users")
-public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+@Table(name = "users") 
+public class User extends BaseEntity{
+  
+  
     @Column(nullable = false, unique = true)
     private String username;
 
@@ -30,14 +27,6 @@ public class User {
     }
 
     // Getters and Setters
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getUsername() {
         return username;
     }
